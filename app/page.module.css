@@ -1,0 +1,34 @@
+/* StatusCode : 200 StatusDescription : OK Content : @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap"); */
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* flex-d... RawContent: HTTP/1.1 200 OK Connection: keep-alive Content-Security-Policy: default-src 'none';
+    style-src 'unsafe-inline'; */
+/* 
+    sandbox Strict-Transport-Security: max-age=31536000 X-Content-Type-Options: nosniff ... Forms : {}
+
+    Headers : {
+        [Connection,
+        keep-alive],
+        [Content-Security-Policy,
+        default-src 'none';
+        style-src 'unsafe-inline';
+        sandbox],
+        [Strict-Transport-Security,
+        max-age=31536000],
+        [X-Conten t-Type-Options,
+        nosniff]...
+    }
+
+    Images : {}
+
+    InputFields : {}
+
+    Links : {}
+
+    ParsedHtml : mshtml.HTMLDocumentClass RawContentLength : 12722 */
