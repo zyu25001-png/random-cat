@@ -9,10 +9,17 @@ type Image = {
 
 // APIから画像を取得する関数
 export async function fetchImage(): Promise<Image> {
-  //                              ^^^^^^^^^^^^^^^^型注釈を追加
+  //  
+  //  //                              ^^^^^^^^^^^^^^^^型注釈を追加
+  const headers: HeadersInit = {};
+  if (CAT_API_KEY) {
+    headers["x-api-key"] = CAT_API_KEY;
+  }
   const res = await fetch("https://api.thecatapi.com/v1/images/search", {
-    headers: { "x-api-key": CAT_API_KEY }, // 追加
+    headers,
   });
+  // headers: { "x-api-key": CAT_API_KEY }, // 追加
+
   const images = await res.json();
   console.log("fetchImage: 画像情報を取得しました", images);
   return images[0]; // 画像情報の配列から最初の要素を返す
